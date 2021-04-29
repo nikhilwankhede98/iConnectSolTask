@@ -1,0 +1,20 @@
+import React from 'react'
+import { connect } from 'react-redux'
+
+const Content = (props) => {
+    const { isAuthenticated } = props.auth
+    return (
+        isAuthenticated ? 
+            <div className="welcome-text">
+                <h1>Welcome to iConnect</h1>
+            </div> : ''
+        
+    )
+}
+
+const mapStateToProps = state => ({
+    auth: state.auth
+})
+
+export default connect(mapStateToProps, null)(Content)
+
