@@ -79,9 +79,6 @@ class LoginModal extends Component {
     render() {
         return(
             <div>
-                {/* <NavLink onClick= {this.toggle} href="#">
-                    Login
-                </NavLink> */}
                 <ul className ="nav-area my-2">
                     <li>
                         <a onClick= {this.toggle} href="#" className ="nav-links">

@@ -2,13 +2,12 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 const Content = (props) => {
-    const { isAuthenticated } = props.auth
+    const { isAuthenticated, loggedIn } = props.auth
     return (
         isAuthenticated ? 
             <div className="welcome-text">
-                <h1>Welcome to iConnect</h1>
-            </div> : ''
-        
+                <h1>Well, hello. Bonjour. Salut</h1>
+            </div> : '' 
     )
 }
 

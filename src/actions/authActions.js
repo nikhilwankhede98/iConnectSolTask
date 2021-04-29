@@ -1,4 +1,3 @@
-import axios from 'axios'
 import {
     USER_LOADING, 
     USER_LOADED,
@@ -10,13 +9,14 @@ import {
     REGISTER_FAIL
 } from './types'
 import { returnErrors } from './errorActions'
+import axiosCall from '../api/axiosCall'
 
 // Check Token And Load User
 export const loadUser = () => (dispatch, getState) => {
     // User Loading
     dispatch({ type: USER_LOADING })
 
-    axios.get('/api/auth/user', tokenConfig(getState))
+    axiosCall.get('/api/auth/user', tokenConfig(getState))
         .then(res => dispatch({
             type: USER_LOADED,
             payload: res.data 
@@ -41,7 +41,7 @@ export const register = ({ name, email, password }) => dispatch => {
     // Request Body
     const body = JSON.stringify({ name, email, password })
 
-    axios.post('/api/users', body, config)
+    axiosCall.post('/api/users', body, config)
         .then(res => dispatch({
             type: REGISTER_SUCCESS,
             payload: res.data
@@ -68,7 +68,7 @@ export const login = ({ email, password }) => dispatch => {
     // Request Body
     const body = JSON.stringify({ email, password })
 
-    axios.post('/api/auth', body, config)
+    axiosCall.post('/api/auth', body, config)
         .then(res => dispatch({
             type: LOGIN_SUCCESS,
             payload: res.data

@@ -12,10 +12,6 @@ export class Logout extends Component {
     render() {
         return (
             <Fragment>
-                {/* <NavLink onClick={this.props.logout} href="#">
-                    Logout
-                </NavLink> */}
-
                 <ul className ="nav-area my-2">
                     <li>
                         <a onClick= {this.props.logout} href="#" className ="nav-links">
