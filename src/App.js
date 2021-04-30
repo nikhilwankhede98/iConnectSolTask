@@ -6,7 +6,6 @@ import Content from './components/Content'
 import {Provider} from 'react-redux'
 import store from './store'
 import {loadUser} from './actions/authActions'
-import { ToastContainer, toast } from 'react-toastify';
 
 
 function App() {

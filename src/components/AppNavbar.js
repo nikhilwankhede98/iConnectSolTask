@@ -10,7 +10,6 @@ import {
     Container
 } from 'reactstrap'
 import { connect } from 'react-redux'
-import Proptypes from 'prop-types'
 import RegisterModal from './auth/RegisterModal'
 import Logout from './auth/Logout'
 import LoginModal from './auth/LoginModal'
