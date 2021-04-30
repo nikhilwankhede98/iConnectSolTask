@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "https://peaceful-sands-83738.herokuapp.com"
+  baseURL: process.env.REACT_APP_BASE_URL || "http://localhost:5000"
 });
